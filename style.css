@@ -299,4 +299,52 @@ footer{
     max-width: none;            /* permite que o conteúdo se ajuste */
     width: 90%;                 /* ou outra unidade relativa */
   }
+
+  /* 1. Container principal passa a empilhar e usar gap */
+  .all-product {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;        /* espaço entre cada produto */
+    width: 100%;
+    padding: 0 1rem;    /* garantir um espaçamento nas laterais */
+  }
+
+  /* 2. Cada “card” de produto ocupa toda a largura disponível, até um max-width */
+  .all-product .product1,
+  .all-product .product2 {
+    width: 100%;
+    max-width: 400px;   /* ou outro valor confortável */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  /* 3. Imagem do produto ocupa toda a largura do card */
+  .all-product img {
+    width: 100%;
+    height: auto;
+    max-width: 300px;   /* controlar altura máxima */
+  }
+
+  /* 4. Detalhes ocupam 100% e ganham padding extra */
+  .detalhes {
+    width: 100%;
+    padding: 1rem;
+    text-align: center;
+  }
+
+  /* 5. Ajustes de tipografia para caber melhor */
+  .detalhes .nome {
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+    line-height: 1.3;
+  }
+
+  .detalhes .descricao {
+    font-size: 0.9rem;
+    line-height: 1.4;
+    margin-bottom: 1rem;
+  }
+
 }
