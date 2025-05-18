@@ -83,13 +83,18 @@ main strong {
     border: 1px solid #d0e7d2;
 }
 
-
-.bellebag img{
+.bellebag figure{
     width: 70%;
     height: auto;
     margin-left: auto;
     margin-right: auto;
 }
+
+.bellebag img{
+    width: 100%;
+    height: auto;
+}
+
 
 /* Responsividade */
 @media (max-width: 768px) {
