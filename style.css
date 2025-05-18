@@ -85,22 +85,55 @@ h1{
   width: 100%;
   display: flex;
   justify-content: space-evenly;
+  align-items: stretch;
+}
+
+.product{
+  width: 25%;
+  /* height: 80%; */
+  /* Defina uma altura mínima ou fixa */
+  min-height: 400px;       /* <-- novo: garante altura suficiente para todo o conteúdo */
+  display: flex;           /* <-- novo: para organizar o conteúdo internamente */
+  flex-direction: column;  /* <-- novo: empilha img + detalhes */
+  justify-content: space-between; /* <-- novo: separa imagem e detalhes */
 }
 
 
-.all-product img {
-  width: 50%;
-  height: auto;
-  margin-left: auto;
-  margin-right: auto;
+.product img {
+  width: 70%;
+  height: 200px;          /* <-- novo: define altura fixa para todas */
+  object-fit: cover;      /* <-- novo: recorta ou escala mantendo proporção */
+  object-position: center bottom;
   display: block;
+  margin: 0 auto;
 }
 
 .detalhes{
-  width: 50%;
+  width: 80%;
   margin-left: auto;
   margin-right: auto;
   text-align: center;
+}
+
+.ecobag{
+  display: flex;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.ecobag figure{
+  height: 70vh;
+  width: 50vw;
+  display: block;
+}
+
+.ecobag figure img{
+  height: 100%;
+  width: auto;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
 }
 
 
@@ -346,6 +379,19 @@ h1{
     width: 90%;                 /* ou outra unidade relativa */
   }
 
+  .ecobag {
+    display: flex;              /* já existente */
+    flex-direction: column;     /* empilha verticalmente */
+    align-items: center;        /* centraliza horizontalmente */ 
+    /* justify-content: center;  se desejar centralizar verticalmente */
+    width: 100%;                /* expande ao máximo da viewport */
+    text-align: center;         /* centraliza textos internos */
+  }
+  .ecobag img {
+    width: 100%;                /* garante que a imagem ocupe a largura disponível */
+    max-width: 300px;           /* ou outro valor confortável */
+  }
+
   /* 1. Container principal passa a empilhar e usar gap */
   .all-product {
     display: flex;
@@ -357,8 +403,7 @@ h1{
   }
 
   /* 2. Cada “card” de produto ocupa toda a largura disponível, até um max-width */
-  .all-product .product1,
-  .all-product .product2 {
+  .all-product .product{
     width: 100%;
     max-width: 400px;   /* ou outro valor confortável */
     display: flex;
