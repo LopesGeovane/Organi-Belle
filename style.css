@@ -277,3 +277,26 @@ footer{
     clip: rect(0, 0, 0, 0);
     border: 0;
 }
+
+
+
+
+
+@media (max-width: 768px) {
+  .best-seller {
+    display: flex;              /* já existente */
+    flex-direction: column;     /* empilha verticalmente */
+    align-items: center;        /* centraliza horizontalmente */ 
+    /* justify-content: center;  se desejar centralizar verticalmente */
+    width: 100%;                /* expande ao máximo da viewport */
+    text-align: center;         /* centraliza textos internos */
+  }
+  .best-seller img {
+    width: 100%;                /* garante que a imagem ocupe a largura disponível */
+    max-width: 300px;           /* ou outro valor confortável */
+  }
+  .meta-dados {
+    max-width: none;            /* permite que o conteúdo se ajuste */
+    width: 90%;                 /* ou outra unidade relativa */
+  }
+}
