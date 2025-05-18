@@ -111,6 +111,10 @@ main strong {
         padding: 20px;
         margin: 15px 0;
     }
+
+    .bellebag figure{
+        width: 100%;
+    }
 }
 
 /* Elementos Específicos */
